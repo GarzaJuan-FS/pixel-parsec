@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pixel-parsec.vercel.app/sitemap.xml
