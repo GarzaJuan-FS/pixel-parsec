@@ -23,8 +23,9 @@
 <link rel="stylesheet" href="./base.css">
 <link rel="stylesheet" href="./style.css">
 </head>
-<body>
+<body data-root="./" data-shop-page="home">
 <a href="#main" class="skip-link">Skip to content</a>
+<div class="announce">New: the Pixel &amp; Parsec Shop is open · <strong>Curated gaming setup gear</strong></div>
 
 <header class="site-header">
   <div class="container site-header__inner">
@@ -39,11 +40,15 @@
     <nav class="main-nav" id="main-nav" aria-label="Primary">
       <ul>
         <li><a href="./index.html" aria-current="page">Home</a></li>
+        <li><a href="./shop/index.html">Shop</a></li>
         <li><a href="./pages/star-wars.html">Star Wars</a></li>
         <li><a href="./pages/anime-manga.html">Anime &amp; Manga</a></li>
         <li><a href="./pages/gaming-tech.html">Gaming &amp; Tech</a></li>
         <li><a href="./pages/about.html">About</a></li>
       </ul>
+      <a href="./shop/my-setup.html" class="theme-toggle nav-saved" aria-label="My Setup saved items" title="My Setup">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20.5s-7.5-4.6-7.5-10A4.5 4.5 0 0 1 12 7.6a4.5 4.5 0 0 1 7.5 2.9c0 5.4-7.5 10-7.5 10z"/></svg><span class="nav-saved__count" data-saved-count>0</span>
+      </a>
       <button class="nav-toggle" id="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
@@ -65,9 +70,36 @@
       <h1 class="hero-title" style="max-width: 16ch;">Where sci-fi, anime, and gaming gear collide.</h1>
       <p class="lede hero__lede">Honest gear guides and watchlists for the corners of geekdom we actually live in — Star Wars collectibles, underrated anime, and the PC &amp; VR builds worth your money.</p>
       <div class="hero__actions">
-        <a href="./pages/star-wars.html" class="btn btn--primary">Explore Star Wars</a>
+        <a href="./shop/index.html" class="btn btn--primary">Shop Setup Gear</a>
         <a href="./pages/gaming-tech.html" class="btn btn--ghost">Browse Gaming &amp; Tech</a>
       </div>
+    </div>
+  </section>
+
+  <!-- SHOP -->
+  <section class="section-tight" style="padding-top: clamp(var(--space-12), 6vw, var(--space-16));">
+    <div class="container container--wide">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">The shop</span>
+          <h2 class="section-title">Build your perfect setup.</h2>
+        </div>
+        <a class="section-head__link" href="./shop/index.html">Shop all gear <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="cat-grid" data-category-tiles></div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container container--wide">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Top setup picks</span>
+          <h2 class="section-title">Our favorite everyday upgrades.</h2>
+        </div>
+        <a class="section-head__link" href="./shop/index.html#all-products">See all products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="p-grid" data-grid="home-picks"></div>
     </div>
   </section>
 
@@ -221,11 +253,13 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Featured</h4>
+        <h4>Shop</h4>
         <ul>
-          <li><a href="./pages/article-star-wars-collectibles.html">SW Collectibles Guide</a></li>
-          <li><a href="./pages/article-underrated-anime.html">Underrated Anime</a></li>
-          <li><a href="./pages/article-quest-accessories.html">Quest 3 Accessories</a></li>
+          <li><a href="./shop/index.html">All Products</a></li>
+          <li><a href="./shop/desk-setup.html">Desk Setup</a></li>
+          <li><a href="./shop/lighting.html">Lighting</a></li>
+          <li><a href="./shop/accessories.html">Accessories</a></li>
+          <li><a href="./shop/room-gear.html">Room Gear</a></li>
         </ul>
       </div>
     </div>
@@ -242,5 +276,7 @@
 </footer>
 
 <script src="./app.js"></script>
+<script src="./shop/products.js"></script>
+<script src="./shop/shop.js"></script>
 </body>
 </html>
