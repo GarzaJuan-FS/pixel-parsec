@@ -251,7 +251,7 @@
       if (p.buyUrl) {
         buy.innerHTML = '<a class="btn btn--primary btn--lg" href="' + esc(p.buyUrl) + '" target="_blank" rel="noopener' + (p.affiliate ? ' nofollow sponsored' : '') + '">' +
           (p.affiliate ? 'Check Price' : 'Buy Now') + ' ' + ARROW + '</a>' +
-          (p.affiliate ? '<p class="affiliate-note">We may earn a commission on this link at no extra cost to you.</p>' : '<p class="p-ship">Free US shipping on orders over $50 · 30-day returns</p>');
+          (p.affiliate ? '<p class="affiliate-note">Current price and availability are shown on Amazon. As an Amazon Associate, Pixel &amp; Parsec earns from qualifying purchases.</p>' : '<p class="p-ship">Checkout opens in a new tab.</p>');
       } else {
         buy.innerHTML = '<button class="btn btn--ghost btn--lg" type="button" disabled>Coming Soon</button>' +
           '<p class="p-ship">This item is not in stock yet. Save it to My Setup and join the list below to hear when it drops.</p>';
